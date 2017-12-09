@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dell.project_database.AddOrderActivity">
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        android:text="New Order"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="135dp"
+        android:layout_marginStart="135dp" />
+
+    <TextView
+        android:id="@+id/textviewOrderID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView9"
+        android:layout_toEndOf="@+id/textView9"
+        android:layout_toRightOf="@+id/textView9"
+        android:text="#" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="43dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="111dp"
+        android:text="Order Date"
+        android:layout_below="@+id/textView9"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:text="Due Date"
+        android:layout_below="@+id/textView11"
+        android:layout_alignRight="@+id/textView11"
+        android:layout_alignEnd="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="44dp"
+        android:text="Customer ID"
+        android:layout_above="@+id/textView12"
+        android:layout_alignRight="@+id/textView11"
+        android:layout_alignEnd="@+id/textView11" />
+
+    <Spinner
+        android:id="@+id/spinnerCustomerID"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView13"
+        android:layout_alignLeft="@+id/textView9"
+        android:layout_alignStart="@+id/textView9" />
+
+    <Spinner
+        android:id="@+id/spinnerDayOrder"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/spinnerMonthOrder"
+        android:layout_alignLeft="@+id/spinnerCustomerID"
+        android:layout_alignStart="@+id/spinnerCustomerID" />
+
+    <Spinner
+        android:id="@+id/spinnerDayDue"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView12"
+        android:layout_alignLeft="@+id/spinnerDayOrder"
+        android:layout_alignStart="@+id/spinnerDayOrder" />
+
+    <Spinner
+        android:id="@+id/spinnerMonthOrder"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView11"
+        android:layout_toRightOf="@+id/spinnerDayOrder"
+        android:layout_toEndOf="@+id/spinnerDayOrder" />
+
+    <Spinner
+        android:id="@+id/spinnerMonthDue"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/spinnerDayDue"
+        android:layout_toRightOf="@+id/spinnerDayDue"
+        android:layout_toEndOf="@+id/spinnerDayDue" />
+
+    <Spinner
+        android:id="@+id/spinnerYearDue"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/spinnerMonthDue"
+        android:layout_toEndOf="@+id/spinnerMonthDue"
+        android:layout_toRightOf="@+id/spinnerMonthDue" />
+
+    <Spinner
+        android:id="@+id/spinnerYearOrder"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/spinnerMonthOrder"
+        android:layout_toEndOf="@+id/spinnerMonthOrder"
+        android:layout_toRightOf="@+id/spinnerMonthOrder" />
+
+
+</android.widget.RelativeLayout>
