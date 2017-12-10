@@ -13,7 +13,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="35dp"
-        android:text="Enter Customer's ID you want to delete" />
+        android:text="Enter Customer's id you want to delete" />
 
     <EditText
         android:id="@+id/custDelID"
@@ -24,7 +24,7 @@
         android:layout_marginTop="53dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="ID" />
+        android:text="id" />
 
     <Button
         android:id="@+id/buttonOK"

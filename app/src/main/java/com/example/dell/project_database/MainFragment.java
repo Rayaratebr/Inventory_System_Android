@@ -5,13 +5,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.app.Fragment;
 import android.support.annotation.Nullable;
-import android.support.annotation.StringDef;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import java.util.ArrayList;
+import com.example.dell.project_database.Models.Customer;
 
 
 /**
@@ -100,7 +99,7 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 Intent myIntent = new Intent(getActivity(),
-                        AddOrderActivity.class);
+                        AddOrder2.class);
                 getActivity().startActivity(myIntent);
                 getActivity().finish();
             }

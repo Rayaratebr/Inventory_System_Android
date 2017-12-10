@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.example.dell.project_database.Models.Customer;
+
 public class DeleteCustomerActivity extends AppCompatActivity {
 
     @Override
@@ -20,7 +22,7 @@ public class DeleteCustomerActivity extends AppCompatActivity {
         buttonDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Customer.getCustomersList().get(Integer.parseInt(textCustID.getText().toString())).setVoidInd(false);
+                Customer.getCustomersList().get(Integer.parseInt(textCustID.getText().toString()));
             }
         });
 

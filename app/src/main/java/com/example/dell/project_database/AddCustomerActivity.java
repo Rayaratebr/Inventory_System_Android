@@ -3,15 +3,19 @@ package com.example.dell.project_database;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import java.util.ArrayList;
+import com.example.dell.project_database.Models.Customer;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class AddCustomerActivity extends AppCompatActivity  {
 
@@ -55,14 +59,29 @@ public class AddCustomerActivity extends AppCompatActivity  {
                     objCustomer.setName(txtCustomerName.getText().toString());
                     objCustomer.setAddress(txtAddress.getText().toString());
                     objCustomer.setPhone(txtPhone.getText().toString());
-                    objCustomer.setCustomerID(customerId);
-                    objCustomer.setVoidInd(true);
+//                    objCustomer.setCustomerID(customerId);
+//                    objCustomer.setVoidInd(true);
                     customerID.setText("#"+(customerId+1));
                     txtCustomerName.setText("");
                     txtPhone.setText("");
                     txtAddress.setText("");
 
-                    Customer.getCustomersList().add(objCustomer);
+                    /*storing the new customer to database using port request*/
+                    Call<String> repos = Config.apiService.storeCustomer(objCustomer);
+                    repos.enqueue(new Callback<String>() {
+                        @Override
+                        public void onResponse(Call<String> call, Response<String> response) {
+                            Toast.makeText(AddCustomerActivity.this, response.body(), Toast.LENGTH_LONG).show();
+                        }
+
+                        @Override
+                        public void onFailure(Call<String> call, Throwable t) {
+                            Toast.makeText(AddCustomerActivity.this, "error", Toast.LENGTH_LONG).show();
+                        }
+                    });
+
+
+//                    Customer.getCustomersList().add(objCustomer);
                 }
 
 

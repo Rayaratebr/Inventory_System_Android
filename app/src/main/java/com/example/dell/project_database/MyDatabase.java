@@ -5,6 +5,8 @@ import android.content.ContextWrapper;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import com.example.dell.project_database.Models.Customer;
+
 import java.util.LinkedList;
 
 /**
@@ -86,7 +88,7 @@ public class MyDatabase {
             if (objCur.moveToFirst()) {
                 do {
                     Customer objCustomer = new Customer();
-                    objCustomer.setCustomerID(objCur.getLong(objCur.getColumnIndex("CustomerID")));
+//                    objCustomer.setCustomerID(objCur.getLong(objCur.getColumnIndex("CustomerID")));
                     objCustomer.setName(objCur.getString(objCur.getColumnIndex("CustomerName")));
                     objCustomer.setAddress(objCur.getString(objCur.getColumnIndex("Address")));
                     objCustomer.setPhone(objCur.getString(objCur.getColumnIndex("Phone")));
